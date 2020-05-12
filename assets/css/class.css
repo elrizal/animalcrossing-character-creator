@@ -1,7 +1,8 @@
 body {
     font-size: 16px;
-    background: #eee;
     line-height: 1.5em;
+    color: rgb(67, 67, 67);
+    background: #eee url("../images/bg.jpg") fixed center;
     font-family: 'Baloo Tamma 2', Arial, Helvetica, sans-serif;
   }
   .primary-bg {
@@ -11,20 +12,21 @@ body {
     color: #a68ce4
   }
   .secondary-bg {
-    background-color: #22c1c3
+    background-color: #15a0a5
   }
   .gradient {
-    background: rgb(34,193,195);
-    background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(166,140,228,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(166,140,228,1) 100%);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(166,140,228,1) 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#a68ce4",GradientType=1);
-    -webkit-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#a68ce4",GradientType=1);
+    background: #15a0a5;
+    background: -moz-linear-gradient(0deg, #15a0a5 0%, rgba(166,140,228,1) 100%);
+    background: -webkit-linear-gradient(0deg, #15a0a5 0%, rgba(166,140,228,1) 100%);
+    background: linear-gradient(0deg, #15a0a5 0%, rgba(166,140,228,1) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#15a0a5",endColorstr="#a68ce4",GradientType=1);
+    -webkit-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#15a0a5",endColorstr="#a68ce4",GradientType=1);
   }
   h1 {
     font-family: 'Bungee', Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    line-height: 3em
+    font-size: 2.3em;
+    line-height: 3em;
+    color: white;
   }
   h2 {
     font-size: 2em;
@@ -41,42 +43,46 @@ body {
     text-align: center;
   }
   label {
-    color: rgb(150, 150, 150);
+    color: rgb(201, 175, 137);
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
   .trendy-box {
     padding: 18px;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 6px 7px 19px 0px #dedede;
-    background-color: white;
-  }
-  input {
+    background-color: beige;
+    border-radius: 5% 10% 8% 6% / 6% 6% 44% 9%
+
+}
+  input, input:active {
     padding: 15px;
     font-size: 16px;
     margin: 10px 0px 15px 0px;
     display: block;
-    border-color: rgb(230, 230, 230);
+    border-color: rgb(201, 175, 137);
     border-style: solid;
     width: 95%;
     background-color: transparent;
+    border-width: 5px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     border-radius: 5px;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-  }
+}
   input:focus{
     outline: none;
-    border-color: rgb(59, 245, 183);
+    border-color:#2ec5cb;
   }
   .primary-btn {
     font-size: 1em;
@@ -89,7 +95,9 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    border-color: #a68ce4;
+    background: transparent;
+    color: #0da5aa;
+    border-color: #2ec5cb;
     border-width: 0.2em;
     margin: 10px 0px 10px 0px;
     transition: 0.4s;
@@ -100,7 +108,7 @@ body {
   }
   .primary-btn:hover {
     color: #eee;
-    background-color: #a68ce4;
+    background-color: #2ec5cb;;
   }
   
   .show {
@@ -117,3 +125,15 @@ body {
     border-color: rgba(211, 211, 211, 0.248);
     margin: 1em 0em 1em 0em
   }
+  .min {
+      max-height: 0%
+  }
+  .name {
+    background-color: rgb(233, 152, 3);
+    color: rgb(147, 82, 2);
+    text-align: center;
+    padding: 5px;
+    max-width: 80%;
+    border-radius: 80% 20% 69% 31% / 53% 53% 47% 47%
+
+}

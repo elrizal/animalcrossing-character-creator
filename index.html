@@ -2,27 +2,25 @@
 <html lang="en">
 
 <head>
-    <title>Classes</title>
+    <title>Make a New Character</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Bungee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./class.css">
+    <link rel="stylesheet" href="./assets/css/class.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="centered primary-text">Make an Animal Crossing Villager!</h1>
-        <h2 class="centered">It's not enough that you can be mayor. Now you must be GOD.</h2>
-        <div id="enter-new-guy" class="trendy-box">
+    <main class="container" id="content"> 
+        <h1 class="centered">Make an Animal Crossing Villager!</h1>
+        <div class="trendy-box enter-new-guy">
             <form>
                 <div class="form-group">
                     <label for="name">Character Name</label>
                     <input id="name" type="Name" class="form-control" aria-describedby="namehelp"
                         placeholder="What do I go by?">
-
                 </div>
                 <div class="form-group">
                     <label for="type">Species</label>
@@ -44,65 +42,12 @@
                     <input id="enter-catch" type="enter-catch" class="form-control" placeholder="...">
                 </div>
 
-                <button type="submit" id="submit" class="primary-text primary-btn">new villager</button>
+                <button type="submit" id="submit" class="primary-text primary-btn centered">new villager</button>
             </form>
-
         </div>
-
         <div id="result">
         </div>
-    </div>
-    <script>
-        const submit = document.getElementById("submit");
-
-        submit.addEventListener('click', function () {
-            const enterName = document.querySelector("#name").value;
-            const enterType = document.getElementById("type").value;
-            const enterPersonality = document.getElementById("personality").value;
-            const enterStyle = document.getElementById("style").value;
-            const resultDiv = document.getElementById("result");
-            const enterNew = document.getElementById("enter-new-guy");
-            const enterCatchphrase = document.getElementById("enter-catch").value;
-
-            function addAndDestroy(){
-                
-                enterNew.classList.add('animate__animated', 'animate__fadeOut');
-                enterNew.remove()
-                resultDiv.classList.add('animate__animated', 'animate__bounceIn');
-            }
-
-            event.preventDefault();
-
-            class templateCharacter {
-                constructor(name, species, personality, style, catchphrase) {
-                    this.name = name;
-                    this.species = species;
-                    this.personality = personality;
-                    this.style = style;
-                    this.catchphrase = catchphrase;
-                }
-            }
-
-            class newChar extends templateCharacter {
-                constructor(name, species, personality, style, catchphrase) {
-                    super(name, species, personality, style, catchphrase)
-                }
-            }
-            const characterToAdd = new newChar(enterName, enterType, enterPersonality, enterStyle, enterCatchphrase)
-            console.log(characterToAdd)
-
-            function generateChar() {
-                    resultDiv.innerHTML = `<div class="trendy-box">
-                    <h2>Hi, I'm ${characterToAdd.name}! ${characterToAdd.catchphrase}</h2> 
-                    <label>Species:</label><h3>${characterToAdd.species}</h3>
-                    <label>I am usually:</label><h3>${characterToAdd.personality}</h3>
-                    <label>My fashion is generally:</label><h3>${characterToAdd.style}</h3>
-                    </div>`
-                    addAndDestroy()
-            }
-            generateChar()
-        });
-    </script>
+    </main>
+<script src="./assets/js/class.js"></script>
 </body>
-
 </html>
