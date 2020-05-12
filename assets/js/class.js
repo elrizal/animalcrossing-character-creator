@@ -40,10 +40,10 @@ document.getElementById("submit").addEventListener("click", function() {
 // ============================================= 
 // Add info from the new "characterToAdd" object and remove the form:
   function addAndDestroy() {
-    enterNew.classList.add("animate__animated", "animate__zoomOut");
+    enterNew.classList.add("animate__animated", "animate__bounceOut");
     enterNew.addEventListener("animationend", () => {
       enterNew.remove();
-      resultDiv.classList.add("animate__animated", "animate__zoomIn");
+      resultDiv.classList.add("animate__animated", "animate__bounceIn");
       resultDiv.innerHTML = `<div class="trendy-box">
       <div class="name"><h2>Hi, I'm ${characterToAdd.name}! </h2>
       </div><br />
