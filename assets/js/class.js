@@ -22,6 +22,9 @@ document.getElementById("submit").addEventListener("click", function() {
       this.style = style;
       this.catchphrase = catchphrase;
     }
+    showStats(){
+      console.log(`${this.name} - ${this.species} - ${this.style}`)
+    }
   }
 // then we make a new instant of the above object
   class newChar extends templateCharacter {
@@ -37,7 +40,7 @@ document.getElementById("submit").addEventListener("click", function() {
     enterStyle,
     enterCatchphrase
   );
-
+  characterToAdd.showStats()
 // ============================================= 
 // Add info from the new "characterToAdd" object and remove the form:
   function addAndDestroy() {
