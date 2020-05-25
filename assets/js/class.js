@@ -13,7 +13,7 @@ document.getElementById("submit").addEventListener("click", function() {
 
 // ============================================= 
 // Character creation with constructors:
-
+//Instantiation:
   class templateCharacter {
     constructor(name, species, personality, style, catchphrase) {
       this.name = name;
@@ -23,10 +23,11 @@ document.getElementById("submit").addEventListener("click", function() {
       this.catchphrase = catchphrase;
     }
   }
-
+// then we make a new instant of the above object
   class newChar extends templateCharacter {
     constructor(name, species, personality, style, catchphrase) {
-      super(name, species, personality, style, catchphrase);
+      super(name, species, personality, style, catchphrase); //"super" needs to be
+      // called in order to access "this"
     }
   }
   const characterToAdd = new newChar(
@@ -45,19 +46,18 @@ document.getElementById("submit").addEventListener("click", function() {
       enterNew.remove();
       resultDiv.classList.add("animate__animated", "animate__bounceIn");
       resultDiv.innerHTML = `<div class="trendy-box">
-      <div class="name"><h2>Hi, I'm ${characterToAdd.name}! </h2>
+      <div class="name"><h2>${characterToAdd.name}</h2>
       </div><br />
-       <i>"${characterToAdd.catchphrase}"</i><br />
+      <h3>"${characterToAdd.catchphrase}"
+      </h3>
+       
       <label>I am a:</label><h3>${characterToAdd.species}</h3>
       <label>I am usually:</label><h3>${characterToAdd.personality}</h3>
       <label>My fashion sense is generally:</label><h3>${characterToAdd.style}</h3>
       </div>
       `;
     });
-
   }
-
-
 
   addAndDestroy();
 });

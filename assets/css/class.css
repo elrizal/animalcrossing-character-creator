@@ -41,6 +41,8 @@ body {
   }
   .centered {
     text-align: center;
+    align-items: center;
+    align-content: center;
   }
   label {
     color: rgb(201, 175, 137);
@@ -53,8 +55,11 @@ body {
     margin: 0 auto;
     margin-top: 15px;
     background-color: beige;
-    border-radius: 5% 10% 8% 6% / 6% 6% 44% 9%
-
+    border-radius: 94% 8% 100% 3% / 3% 94% 5% 96%;
+    -webkit-border-radius: 94% 8% 100% 3% / 3% 94% 5% 96%;
+    -moz-border-radius: 94% 8% 100% 3% / 3% 94% 5% 96%;
+    -ms-border-radius: 94% 8% 100% 3% / 3% 94% 5% 96%;
+    -o-border-radius: 94% 8% 100% 3% / 3% 94% 5% 96%;
 }
   input, input:active {
     padding: 15px;
@@ -133,7 +138,10 @@ body {
     color: rgb(147, 82, 2);
     text-align: center;
     padding: 5px;
-    max-width: 80%;
-    border-radius: 80% 20% 69% 31% / 53% 53% 47% 47%
-
+    max-width: 40%;
+    border-radius: 79% 20% 77% 17% / 29% 48% 47% 57%;
+    -webkit-border-radius: 79% 20% 77% 17% / 29% 48% 47% 57%;
+    -moz-border-radius: 79% 20% 77% 17% / 29% 48% 47% 57%;
+    -ms-border-radius: 79% 20% 77% 17% / 29% 48% 47% 57%;
+    -o-border-radius: 79% 20% 77% 17% / 29% 48% 47% 57%;
 }
